@@ -1,16 +1,18 @@
 import React from 'react';
-import './App.css';
-import Home from './components/pages/HomePage/Home';
-import Services from './components/pages/Services/Services';
-import Products from './components/pages/Products/Products';
-import SignUp from './components/pages/SignUp/SignUp';
+import GlobalStyle from './globalStyles';
+import Home from './pages/HomePage/Home';
+import Services from './pages/Services/Services';
+import Products from './pages/Products/Products';
+import SignUp from './pages/SignUp/SignUp';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import Navbar from './components/Navbar';
-import Footer from './components/pages/Footer.js/Footer';
+import ScrollToTop from './components/ScrollToTop';
+import { Navbar, Footer } from './components';
 
 function App() {
   return (
     <Router>
+      <GlobalStyle />
+      <ScrollToTop />
       <Navbar />
       <Switch>
         <Route path='/' exact component={Home} />
